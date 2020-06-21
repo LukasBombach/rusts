@@ -1,0 +1,23 @@
+{
+  "name": "rusts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LukasBombach/rusts",
+  "author": "Lukas Bombach <lukas.bombach@googlemail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "typescript": "3.9.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.10.3",
+    "@babel/preset-env": "7.10.3",
+    "@babel/preset-typescript": "7.10.1",
+    "@types/jest": "26.0.0",
+    "@types/node": "14.0.13",
+    "babel-jest": "26.0.1",
+    "jest": "26.0.1"
+  }
+}
