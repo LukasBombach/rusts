@@ -4,7 +4,8 @@ TSlike to Rust transpiler
 
 todo
 
-- [ ] set up babel
+- [x] setup ast parser
+- [x] create dev & test setup
 - [ ] implement ts to rust transpiler
 - [ ] ????
 - [ ] profit
