@@ -1,8 +1,10 @@
 import fs from "fs";
 import { resolve } from "path";
-import ts from "typescript";
+import { Project } from "ts-morph";
 
 describe("fist steps", () => {
+  const project = new Project();
+
   async function readFixture(fileName: string) {
     const filePath = resolve(__dirname, "__fixtures__", fileName);
     return await fs.promises.readFile(filePath, "utf8");
@@ -10,7 +12,7 @@ describe("fist steps", () => {
 
   async function readAst(fileName: string) {
     const source = await readFixture(fileName);
-    return ts.createSourceFile(fileName, source, ts.ScriptTarget.Latest);
+    return project.createSourceFile(fileName, source);
   }
 
   test("the setup works", () => {
@@ -20,6 +22,5 @@ describe("fist steps", () => {
   test("it can read an AST", async () => {
     const ast = await readAst("helloworld.ts");
     debugger;
-    expect(ts.isSourceFile(ast)).toBe(true);
   });
 });

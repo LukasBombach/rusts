@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "ts-morph": "7.1.2",
     "typescript": "3.9.5"
   },
   "devDependencies": {
