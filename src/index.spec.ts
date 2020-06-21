@@ -1,9 +1,6 @@
 import fs from "fs";
 import { resolve } from "path";
-import util from "util";
-import * as ts from "typescript";
-
-import type { SourceFile } from "typescript";
+import ts from "typescript";
 
 describe("fist steps", () => {
   async function readFixture(fileName: string) {
@@ -16,16 +13,13 @@ describe("fist steps", () => {
     return ts.createSourceFile(fileName, source, ts.ScriptTarget.Latest);
   }
 
-  function inspect(value: any, depth: number = null, colors = true) {
-    console.log(util.inspect(value, { depth, colors }));
-  }
-
   test("the setup works", () => {
     expect(true).toBe(true);
   });
 
   test("it can read an AST", async () => {
     const ast = await readAst("helloworld.ts");
+    debugger;
     expect(ts.isSourceFile(ast)).toBe(true);
   });
 });
